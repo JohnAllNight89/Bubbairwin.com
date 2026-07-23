@@ -424,6 +424,41 @@ a:hover { color: #ffffff; }
 }
 
 /* ============================================================
+   FEATURED ARTIST SECTION
+   ============================================================ */
+.featured-artist {
+  background: linear-gradient(180deg, rgba(5, 5, 6, 0.5) 0%, rgba(11, 12, 14, 0.8) 100%);
+  border-top: 1px solid rgba(201, 207, 216, 0.12);
+  border-bottom: 1px solid rgba(201, 207, 216, 0.12);
+  padding: 3.5rem 1.5rem;
+}
+.featured-artist__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.featured-artist__frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(201, 207, 216, 0.08);
+  border: 1px solid rgba(201, 207, 216, 0.18);
+}
+.featured-artist__frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.featured-artist__frame figcaption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(5, 5, 6, 0.9) 60%);
+  color: var(--ink-dim);
+  padding: 3rem 1.5rem 1.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================================
    SECTIONS (shared)
    ============================================================ */
 .section { padding: 6.5rem 1.5rem; }
@@ -1426,6 +1461,8 @@ a:hover { color: #ffffff; }
   .form__row { grid-template-columns: 1fr; gap: 0; }
   .footer__inner { grid-template-columns: 1fr; gap: 2rem; }
   .section { padding: 4.5rem 1.25rem; }
+  .featured-artist { padding: 2.5rem 1.25rem; }
+  .featured-artist__frame figcaption { padding: 2rem 1rem 1rem; font-size: 0.9rem; }
   .marquee__track span { font-size: 0.95rem; }
   .quote { padding: 4rem 1.25rem; }
   .connect__grid { grid-template-columns: 1fr; }
