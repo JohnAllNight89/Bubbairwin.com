@@ -6,6 +6,7 @@ Official website for professional tattoo artist **Bubba Irwin**. A fast, depende
 
 - **Hero** — bold brand introduction with "Book a Consultation" and "View the Work" calls-to-action
 - **Gallery** — responsive portfolio grid with style filters (Black & Grey, Color, Traditional, Fine Line) and a keyboard-navigable lightbox
+- **In Motion** — three of Bubba's Instagram reels embedded via Instagram's official embed player (edit the reel URLs in the `#reels` section of `index.html` to rotate in new posts)
 - **Bio** — Bubba's background, experience, and artistic philosophy
 - **Affiliations** — linked cards for [Glasshouse Tattoo](https://glasshousetattoo.com) and [Old Town Ink](https://oldtownink.com)
 - **Contact / Booking** — consultation request form (name, email, phone, tattoo idea, preferred placement, reference-image upload) delivered to **Bubba@bubbairwintattoo.com**

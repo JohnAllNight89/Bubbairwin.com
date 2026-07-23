@@ -364,6 +364,43 @@ a:hover { color: #e0bc45; }
 }
 
 /* ============================================================
+   FEATURED REELS
+   ============================================================ */
+.reels__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+.reels__item {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.reels__item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 162, 39, 0.45);
+  box-shadow: var(--shadow);
+}
+.reels__item iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #000;
+}
+.reels__cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* ============================================================
    PULL QUOTE
    ============================================================ */
 .quote {
@@ -953,6 +990,8 @@ a:hover { color: #e0bc45; }
   .gallery__grid { grid-template-columns: repeat(2, 1fr); }
   .gallery__item--featured { grid-column: span 2; grid-row: span 1; }
   .gallery__item--featured img { aspect-ratio: 4 / 3; height: auto; }
+  .reels__grid { grid-template-columns: repeat(2, 1fr); }
+  .reels__item:last-child { grid-column: span 2; max-width: 480px; justify-self: center; width: 100%; }
   .bio { grid-template-columns: 1fr; gap: 2.5rem; }
   .bio__portrait { position: static; max-width: 340px; }
   .contact { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -996,6 +1035,8 @@ a:hover { color: #e0bc45; }
   .gallery__caption { opacity: 1; transform: none; }
   .marquee__track span { font-size: 1rem; }
   .quote { padding: 4rem 1.25rem; }
+  .reels__grid { grid-template-columns: 1fr; max-width: 420px; }
+  .reels__item:last-child { grid-column: auto; }
   .form { padding: 1.8rem 1.4rem; }
   .form__row { grid-template-columns: 1fr; gap: 0; }
   .footer__inner { grid-template-columns: 1fr; gap: 2rem; }
