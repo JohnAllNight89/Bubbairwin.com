@@ -66,6 +66,10 @@ a:hover { color: #ffffff; }
   background-clip: text;
 }
 
+/* ---------- Tab views: only the active tab's content is shown ---------- */
+.tab { display: none; }
+.tab.is-active { display: block; }
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-block;

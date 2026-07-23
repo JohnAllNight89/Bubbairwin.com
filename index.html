@@ -21,12 +21,12 @@
   <!-- ================= NAVIGATION ================= -->
   <header class="nav" id="top">
     <div class="nav__inner">
-      <a href="#top" class="nav__brand" aria-label="Bubba Irwin Tattoo — home">
+      <a href="#home" class="nav__brand" aria-label="Bubba Irwin Tattoo — home">
         <span class="nav__brand-mark">BI</span>
         <span class="nav__brand-text">Bubba Irwin <em>Tattoo</em></span>
       </a>
       <nav class="nav__links" id="navLinks" aria-label="Primary navigation">
-        <a href="#top" class="nav__link is-active">Home</a>
+        <a href="#home" class="nav__link is-active">Home</a>
         <a href="#gallery" class="nav__link">Gallery</a>
         <a href="#bio" class="nav__link">Bio</a>
         <a href="#connect" class="nav__link">Find Bubba</a>
@@ -38,7 +38,9 @@
     </div>
   </header>
 
-  <!-- ================= HERO ================= -->
+  <!-- ================= HOME TAB ================= -->
+  <div class="tab" data-tab="home">
+
   <section class="hero">
     <div class="hero__bg" aria-hidden="true"></div>
     <div class="hero__inner">
@@ -90,7 +92,11 @@
     </div>
   </div>
 
-  <!-- ================= GALLERY ================= -->
+  </div>
+
+  <!-- ================= GALLERY TAB ================= -->
+  <div class="tab" data-tab="gallery">
+
   <section class="section" id="gallery">
     <div class="section__inner">
       <div class="section__head reveal">
@@ -248,6 +254,11 @@
     </div>
   </section>
 
+  </div>
+
+  <!-- ================= BIO TAB ================= -->
+  <div class="tab" data-tab="bio">
+
   <!-- ================= PULL QUOTE ================= -->
   <section class="quote" aria-label="Artist philosophy">
     <div class="quote__inner reveal">
@@ -369,7 +380,10 @@
     </div>
   </section>
 
-  <!-- ================= FIND & FOLLOW ================= -->
+  </div>
+
+  <!-- ================= FIND BUBBA TAB ================= -->
+  <div class="tab" data-tab="connect">
   <section class="section section--alt" id="connect">
     <div class="section__inner">
       <div class="section__head reveal">
@@ -414,7 +428,10 @@
     </div>
   </section>
 
-  <!-- ================= CONTACT / BOOKING ================= -->
+  </div>
+
+  <!-- ================= BOOK NOW TAB ================= -->
+  <div class="tab" data-tab="contact">
   <section class="section" id="contact">
     <div class="section__inner contact">
       <div class="contact__intro">
@@ -494,6 +511,8 @@
     </div>
   </section>
 
+  </div>
+
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="footer__inner">
@@ -503,7 +522,7 @@
         <p class="footer__tag">Custom tattoo artistry. Built to last.</p>
       </div>
       <nav class="footer__nav" aria-label="Footer navigation">
-        <a href="#top">Home</a>
+        <a href="#home">Home</a>
         <a href="#gallery">Gallery</a>
         <a href="#bio">Bio</a>
         <a href="#connect">Find Bubba</a>

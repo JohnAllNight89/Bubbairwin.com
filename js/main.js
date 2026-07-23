@@ -26,30 +26,24 @@
     }
   });
 
-  /* ---------- Scroll-spy: highlight active section link ---------- */
-  const sections = ["gallery", "bio", "connect", "contact"]
-    .map((id) => document.getElementById(id))
-    .filter(Boolean);
-  const linkFor = {};
-  document.querySelectorAll(".nav__link").forEach((a) => {
-    linkFor[a.getAttribute("href").slice(1)] = a;
-  });
+  /* ---------- Tab navigation (hash-routed views) ---------- */
+  const tabViews = Array.from(document.querySelectorAll(".tab"));
+  const tabNames = tabViews.map((t) => t.dataset.tab);
 
-  function setActive(id) {
-    document.querySelectorAll(".nav__link").forEach((a) => a.classList.remove("is-active"));
-    if (linkFor[id]) linkFor[id].classList.add("is-active");
+  function showTab(name) {
+    const id = tabNames.includes(name) ? name : "home";
+    tabViews.forEach((t) => t.classList.toggle("is-active", t.dataset.tab === id));
+    document.querySelectorAll(".nav__link").forEach((a) => {
+      a.classList.toggle("is-active", a.getAttribute("href") === "#" + id);
+    });
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }
 
-  const spy = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) setActive(entry.target.id);
-    });
-  }, { rootMargin: "-45% 0px -50% 0px" });
-  sections.forEach((s) => spy.observe(s));
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY < 200) setActive("top");
-  }, { passive: true });
+  function route() {
+    showTab((location.hash || "#home").slice(1));
+  }
+  window.addEventListener("hashchange", route);
+  route();
 
   /* ---------- Gallery filters ---------- */
   const chips = document.querySelectorAll(".chip");
