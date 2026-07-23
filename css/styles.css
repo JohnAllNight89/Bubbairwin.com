@@ -676,6 +676,107 @@ a:hover { color: #ffffff; }
 }
 
 /* ============================================================
+   WHY SIT IN BUBBA'S CHAIR
+   ============================================================ */
+.why {
+  margin-top: 5.5rem;
+  padding-top: 4.5rem;
+  border-top: 1px solid rgba(201, 207, 216, 0.12);
+}
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.3rem;
+}
+.why__card {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: var(--radius);
+  padding: 2rem 1.9rem 2rem 2rem;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.why__card:hover {
+  transform: translateY(-4px);
+  border-color: var(--steel-dark);
+  box-shadow: var(--shadow);
+}
+.why__num {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0.9rem;
+  color: transparent;
+  background: var(--chrome);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.why__card h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+}
+.why__card p { color: var(--ink-dim); font-size: 0.97rem; }
+.why__card p strong { color: var(--ink); font-weight: 600; }
+.why__card p em { font-style: italic; color: var(--ink); }
+
+.why__watch {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.3rem;
+  margin-top: 1.3rem;
+  background: linear-gradient(160deg, rgba(201, 207, 216, 0.08), transparent 55%), var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: var(--radius);
+  padding: 1.8rem 2rem;
+  color: var(--ink);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.why__watch:hover {
+  transform: translateY(-3px);
+  border-color: var(--steel-dark);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+}
+.why__watch-icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 58px; height: 58px;
+  border: 1px solid var(--steel-edge);
+  border-radius: 50%;
+  color: var(--steel);
+}
+.why__watch:hover .why__watch-icon { color: #ffffff; }
+.why__watch-text strong {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+.why__watch-text span {
+  display: block;
+  color: var(--ink-dim);
+  font-size: 0.95rem;
+}
+.why__watch-text small {
+  display: block;
+  margin-top: 0.7rem;
+  color: var(--ink-faint);
+  font-size: 0.75rem;
+}
+
+/* ============================================================
    FIND & FOLLOW
    ============================================================ */
 .connect__grid {
@@ -1085,6 +1186,8 @@ a:hover { color: #ffffff; }
   .marquee__track span { font-size: 0.95rem; }
   .quote { padding: 4rem 1.25rem; }
   .connect__grid { grid-template-columns: 1fr; }
+  .why__grid { grid-template-columns: 1fr; }
+  .why__watch { flex-direction: column; }
   .reels__grid { grid-template-columns: 1fr; max-width: 420px; }
   .reels__item:last-child { grid-column: auto; }
   .lightbox { padding: 2.5rem 0.5rem; }
