@@ -232,22 +232,20 @@ a:hover { color: #ffffff; }
   overflow: hidden;
 }
 .hero__bg {
+  /* flat black with a tiny diagonal BI monogram pattern,
+     10px marks running bottom-left to top-right, wide-spaced columns */
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 55% 40% at 25% 20%, rgba(201, 207, 216, 0.06), transparent 70%),
-    radial-gradient(ellipse 45% 45% at 85% 80%, rgba(201, 207, 216, 0.04), transparent 70%),
-    var(--bg);
+  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84'%3E%3Cg fill='%231a1c21' font-family='Georgia,serif' font-size='10' font-weight='bold' letter-spacing='1'%3E%3Ctext x='14' y='28' transform='rotate(-45 14 28)'%3EBI%3C/text%3E%3Ctext x='56' y='70' transform='rotate(-45 56 70)'%3EBI%3C/text%3E%3C/g%3E%3C/svg%3E");
+  background-size: 84px 84px;
 }
 .hero__bg::after {
+  /* fade the monogram field toward the edges so the statement stays dominant */
   content: "";
   position: absolute;
   inset: 0;
-  background-image: repeating-linear-gradient(
-    90deg,
-    rgba(242, 244, 247, 0.012) 0 1px,
-    transparent 1px 7px
-  );
+  background: radial-gradient(ellipse 75% 65% at 50% 45%, transparent 40%, rgba(5, 5, 6, 0.88) 100%);
 }
 .hero__inner {
   position: relative;
@@ -271,13 +269,23 @@ a:hover { color: #ffffff; }
 .hero__title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(3.6rem, 9vw, 6.8rem);
-  line-height: 1.02;
-  letter-spacing: 0.02em;
+  /* 24px base, scaling up on larger screens; single line, left to right */
+  font-size: clamp(1.5rem, 6.5vw, 4.6rem);
+  line-height: 1.05;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+  white-space: nowrap;
   filter: drop-shadow(0 6px 30px rgba(0, 0, 0, 0.8));
 }
-.hero__title-line { display: block; }
+.hero__title-line {
+  display: inline-block;
+  transform: skewX(8deg); /* backslash lean */
+  /* gradient must live on the transformed element itself for clip to paint */
+  color: transparent;
+  background: var(--chrome);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
 .hero__title-sub {
   display: block;
   font-size: 0.32em;
