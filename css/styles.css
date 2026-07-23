@@ -324,7 +324,7 @@ a:hover { color: #ffffff; }
 }
 .hero__social a:hover { color: #ffffff; }
 
-.hero__feature { justify-self: end; width: 100%; max-width: 420px; }
+.hero__feature { justify-self: end; width: 100%; max-width: 480px; }
 .hero__frame {
   border: 1px solid var(--steel-edge);
   border-radius: var(--radius);
@@ -336,7 +336,7 @@ a:hover { color: #ffffff; }
 }
 .hero__frame img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 2px;
 }
@@ -1234,7 +1234,7 @@ a:hover { color: #ffffff; }
   .hero__tagline { margin-left: auto; margin-right: auto; }
   .hero__actions { justify-content: center; }
   .hero__social { justify-content: center; }
-  .hero__feature { justify-self: center; max-width: 380px; }
+  .hero__feature { justify-self: center; max-width: 420px; }
   .connect__grid { grid-template-columns: repeat(2, 1fr); }
 }
 
