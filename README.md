@@ -60,5 +60,6 @@ python3 -m http.server 8000
 ## Customization notes
 
 - **Bio copy** lives in the `#bio` section of `index.html` — review and adjust the wording, years of experience, and stats so they're accurate to Bubba's current career.
-- **Colors/fonts** are defined as CSS variables at the top of `css/styles.css` (`--accent` is the gold; swap it to re-theme the whole site).
+- **Colors/fonts** are defined as CSS variables at the top of `css/styles.css` (`--fire`, `--ember`, and `--volt` are the fiery orange / electric yellow accents; swap them to re-theme the whole site). Headline font is Anton, distressed accents use Permanent Marker.
+- **Bio photo:** the framed placeholder in the `#bio` section is reserved for a candid black-and-white photo of Bubba at work — drop an `<img>` into `.bio__portrait-frame` when one is available.
 - **Social links** are in the footer of `index.html`.

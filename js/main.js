@@ -84,14 +84,17 @@
     document.body.style.overflow = "hidden";
   }
 
+  const lightboxDesc = document.getElementById("lightboxDesc");
+
   function showItem(vis, index) {
     const item = vis[index];
     if (!item) return;
     const img = item.querySelector("img");
-    const cap = item.querySelector(".gallery__caption");
+    const cap = item.querySelector(".gallery__caption span");
     lightboxImg.src = img.src;
     lightboxImg.alt = img.alt;
     lightboxCaption.textContent = cap ? cap.textContent.trim() : "";
+    if (lightboxDesc) lightboxDesc.textContent = item.dataset.desc || "";
   }
 
   function closeLightbox() {
@@ -122,16 +125,69 @@
     if (e.key === "ArrowRight") step(1);
   });
 
-  /* ---------- Scroll reveal ---------- */
+  /* ---------- Scroll reveal: fade in and back out for depth ---------- */
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
+      entry.target.classList.toggle("is-visible", entry.isIntersecting);
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.12, rootMargin: "0px 0px -4% 0px" });
   document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+  /* ---------- Ember cursor trail ---------- */
+  const canvas = document.getElementById("emberCanvas");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const finePointer = window.matchMedia("(pointer: fine)").matches;
+
+  if (canvas && finePointer && !reduceMotion) {
+    const ctx = canvas.getContext("2d");
+    let embers = [];
+    let running = false;
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener("resize", resize, { passive: true });
+
+    window.addEventListener("mousemove", (e) => {
+      for (let i = 0; i < 2; i++) {
+        embers.push({
+          x: e.clientX + (Math.random() - 0.5) * 6,
+          y: e.clientY + (Math.random() - 0.5) * 6,
+          vx: (Math.random() - 0.5) * 0.7,
+          vy: -0.4 - Math.random() * 0.9,
+          size: 1 + Math.random() * 2.2,
+          life: 1,
+          decay: 0.02 + Math.random() * 0.025,
+          hue: 18 + Math.random() * 32   /* fiery orange → yellow */
+        });
+      }
+      if (embers.length > 160) embers = embers.slice(-160);
+      if (!running) { running = true; requestAnimationFrame(tick); }
+    }, { passive: true });
+
+    function tick() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      embers = embers.filter((p) => p.life > 0);
+      for (const p of embers) {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy -= 0.01;
+        p.life -= p.decay;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size * p.life, 0, Math.PI * 2);
+        ctx.fillStyle = "hsla(" + p.hue + ", 100%, " + (50 + p.life * 15) + "%, " + (p.life * 0.55) + ")";
+        ctx.fill();
+      }
+      if (embers.length) {
+        requestAnimationFrame(tick);
+      } else {
+        running = false;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    }
+  }
 
   /* ---------- Booking form: file limits ---------- */
   const fileInput = document.getElementById("f-refs");

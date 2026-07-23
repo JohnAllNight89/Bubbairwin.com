@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bubba Irwin — Tattoo Artist | Custom Tattoos &amp; Consultations</title>
-  <meta name="description" content="Official website of professional tattoo artist Bubba Irwin. View the portfolio, read the story, and book a consultation for custom tattoo work.">
-  <meta property="og:title" content="Bubba Irwin — Tattoo Artist">
-  <meta property="og:description" content="Custom tattoo work by Bubba Irwin. View the portfolio and book a consultation.">
+  <title>Bubba Irwin Tattoo — Dark. Edgy. Artistic. Outside the Norm.</title>
+  <meta name="description" content="Official website of professional tattoo artist Bubba Irwin. Dark-art custom tattoos — view the portfolio and book a consultation.">
+  <meta property="og:title" content="Bubba Irwin Tattoo">
+  <meta property="og:description" content="Dark. Edgy. Artistic. Outside the norm. Custom tattoo work by Bubba Irwin.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bubbairwintattoo.com">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='14' fill='%230b0b0d'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23c9a227' font-family='Georgia,serif'%3EBI%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='14' fill='%230a0908'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23ff5e1a' font-family='Impact,sans-serif'%3EBI%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -20,9 +20,9 @@
   <!-- ================= NAVIGATION ================= -->
   <header class="nav" id="top">
     <div class="nav__inner">
-      <a href="#top" class="nav__brand" aria-label="Bubba Irwin — home">
+      <a href="#top" class="nav__brand" aria-label="Bubba Irwin Tattoo — home">
         <span class="nav__brand-mark">BI</span>
-        <span class="nav__brand-text">Bubba <em>Irwin</em></span>
+        <span class="nav__brand-text">Bubba Irwin <em>Tattoo</em></span>
       </a>
       <nav class="nav__links" id="navLinks" aria-label="Primary navigation">
         <a href="#top" class="nav__link is-active">Home</a>
@@ -40,16 +40,22 @@
   <!-- ================= HERO ================= -->
   <section class="hero">
     <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__collage" aria-hidden="true">
+      <img src="assets/gallery/01-sacred-realism.svg" alt="" class="hero__panel hero__panel--1">
+      <img src="assets/gallery/02-fire-dragon.svg" alt="" class="hero__panel hero__panel--2">
+      <img src="assets/gallery/03-honeycomb-surreal.svg" alt="" class="hero__panel hero__panel--3">
+    </div>
     <div class="hero__content">
-      <p class="hero__eyebrow reveal">Custom Tattoo Artistry</p>
+      <p class="hero__eyebrow reveal">Custom Dark-Art Tattooing</p>
       <h1 class="hero__title reveal">
         <span class="hero__title-line">Bubba</span>
-        <span class="hero__title-line hero__title-line--accent">Irwin</span>
+        <span class="hero__title-line hero__title-line--stroke">Irwin</span>
+        <span class="hero__title-line hero__title-line--small">Tattoo</span>
       </h1>
-      <p class="hero__tagline reveal"><em>Ink with intention.</em> Award-winning tattoo work built on two decades of craft, precision, and respect for the art.</p>
+      <p class="hero__tagline reveal">Dark. Edgy. Artistic. <span class="hero__tagline-mark">Outside the norm.</span></p>
       <div class="hero__actions reveal">
         <a href="#contact" class="btn btn--primary">Book a Consultation</a>
-        <a href="#gallery" class="btn btn--ghost">View the Work</a>
+        <a href="#gallery" class="btn btn--ghost">Enter the Gallery</a>
       </div>
     </div>
     <a href="#gallery" class="hero__scroll" aria-label="Scroll to gallery">
@@ -76,11 +82,11 @@
   </div>
 
   <!-- ================= GALLERY ================= -->
-  <section class="section" id="gallery">
+  <section class="section torn-bottom" id="gallery">
     <div class="section__inner">
       <div class="section__head reveal">
-        <p class="section__eyebrow">Portfolio</p>
-        <h2 class="section__title">The Work</h2>
+        <p class="section__eyebrow">The Work</p>
+        <h2 class="section__title">Enter the Gallery</h2>
         <p class="section__lede">A selection of recent pieces. For the full, always-current portfolio, follow
           <a href="https://www.instagram.com/bubbaitattoos" target="_blank" rel="noopener">@bubbaitattoos</a> on Instagram.</p>
       </div>
@@ -94,39 +100,48 @@
       </div>
 
       <div class="gallery__grid" id="galleryGrid">
-        <figure class="gallery__item gallery__item--featured reveal" data-style="black-grey">
-          <img src="assets/gallery/01-black-grey-portrait.svg" alt="Black and grey portrait realism tattoo" loading="lazy">
-          <figcaption class="gallery__caption"><span>Portrait Realism</span><small>Black &amp; Grey</small></figcaption>
+        <figure class="gallery__item gallery__item--tall reveal" data-style="black-grey"
+                data-desc="Hyper-realistic sacred portrait work — every shadow built in single-needle passes for depth that holds for decades.">
+          <img src="assets/gallery/01-sacred-realism.svg" alt="Hyper-realistic sacred portrait tattoo" loading="lazy">
+          <figcaption class="gallery__caption"><span>Sacred Realism</span><small>Black &amp; Grey</small></figcaption>
         </figure>
-        <figure class="gallery__item reveal" data-style="color">
-          <img src="assets/gallery/02-color-realism.svg" alt="Full color realism tattoo" loading="lazy">
-          <figcaption class="gallery__caption"><span>Color Realism</span><small>Full Color</small></figcaption>
+        <figure class="gallery__item gallery__item--wide reveal" data-style="color"
+                data-desc="A fire dragon in full color — molten oranges and electric yellows layered over charcoal shading, wrapping the full back.">
+          <img src="assets/gallery/02-fire-dragon.svg" alt="Fiery dragon full color back piece tattoo" loading="lazy">
+          <figcaption class="gallery__caption"><span>Fire Dragon</span><small>Full Color</small></figcaption>
         </figure>
-        <figure class="gallery__item reveal" data-style="black-grey">
-          <img src="assets/gallery/03-skull-study.svg" alt="Dark realism skull tattoo" loading="lazy">
-          <figcaption class="gallery__caption"><span>Skull Study</span><small>Dark Realism</small></figcaption>
+        <figure class="gallery__item reveal" data-style="color"
+                data-desc="Surreal portrait fused with honeycomb geometry — realism broken open into pattern, gold tones against matte skin.">
+          <img src="assets/gallery/03-honeycomb-surreal.svg" alt="Surreal portrait tattoo with honeycomb detail" loading="lazy">
+          <figcaption class="gallery__caption"><span>Honeycomb Surreal</span><small>Color</small></figcaption>
         </figure>
-        <figure class="gallery__item reveal" data-style="color">
+        <figure class="gallery__item reveal" data-style="color"
+                data-desc="Traditional Japanese imagery built for the long haul — bold linework, wind bars, and a palette that ages clean.">
           <img src="assets/gallery/04-japanese-sleeve.svg" alt="Japanese style full sleeve tattoo" loading="lazy">
           <figcaption class="gallery__caption"><span>Japanese Sleeve</span><small>Full Sleeve</small></figcaption>
         </figure>
-        <figure class="gallery__item reveal" data-style="color">
-          <img src="assets/gallery/05-wildlife-realism.svg" alt="Wildlife realism tattoo" loading="lazy">
-          <figcaption class="gallery__caption"><span>Wildlife Realism</span><small>Color Realism</small></figcaption>
+        <figure class="gallery__item gallery__item--tall reveal" data-style="black-grey"
+                data-desc="Dark wildlife realism — texture-first shading, from fur to bone, in deep charcoal blacks.">
+          <img src="assets/gallery/05-wildlife-realism.svg" alt="Dark wildlife realism tattoo" loading="lazy">
+          <figcaption class="gallery__caption"><span>Wildlife Realism</span><small>Dark Realism</small></figcaption>
         </figure>
-        <figure class="gallery__item reveal" data-style="fine-line">
+        <figure class="gallery__item reveal" data-style="fine-line"
+                data-desc="Fine line and script — single-needle precision where a millimeter is the difference between clean and chaos.">
           <img src="assets/gallery/06-fine-line.svg" alt="Fine line script tattoo" loading="lazy">
           <figcaption class="gallery__caption"><span>Fine Line &amp; Script</span><small>Detail Work</small></figcaption>
         </figure>
-        <figure class="gallery__item reveal" data-style="black-grey">
+        <figure class="gallery__item gallery__item--wide reveal" data-style="black-grey"
+                data-desc="A surreal custom composition — client concept torn apart and rebuilt into something that only exists on their skin.">
           <img src="assets/gallery/07-surreal-composition.svg" alt="Surreal custom tattoo composition" loading="lazy">
           <figcaption class="gallery__caption"><span>Surreal Composition</span><small>Custom Design</small></figcaption>
         </figure>
-        <figure class="gallery__item reveal" data-style="traditional">
+        <figure class="gallery__item reveal" data-style="traditional"
+                data-desc="Bold Americana — thick lines, flat color, zero apologies. Built like the classics because it is one.">
           <img src="assets/gallery/08-traditional-eagle.svg" alt="Bold traditional americana eagle tattoo" loading="lazy">
           <figcaption class="gallery__caption"><span>Traditional Eagle</span><small>Bold Americana</small></figcaption>
         </figure>
-        <figure class="gallery__item reveal" data-style="black-grey">
+        <figure class="gallery__item reveal" data-style="black-grey"
+                data-desc="Black and grey full sleeve — one continuous composition from shoulder to wrist, planned as a whole before the first line.">
           <img src="assets/gallery/09-black-grey-sleeve.svg" alt="Black and grey full sleeve tattoo" loading="lazy">
           <figcaption class="gallery__caption"><span>Black &amp; Grey Sleeve</span><small>Full Sleeve</small></figcaption>
         </figure>
@@ -137,7 +152,7 @@
   </section>
 
   <!-- ================= FEATURED REELS ================= -->
-  <section class="section section--alt" id="reels">
+  <section class="section section--alt torn-bottom" id="reels">
     <div class="section__inner">
       <div class="section__head reveal">
         <p class="section__eyebrow">In Motion</p>
@@ -173,12 +188,12 @@
   </section>
 
   <!-- ================= BIO ================= -->
-  <section class="section section--alt" id="bio">
+  <section class="section section--alt torn-bottom" id="bio">
     <div class="section__inner bio">
       <div class="bio__portrait reveal" aria-hidden="true">
         <div class="bio__portrait-frame">
           <span class="bio__portrait-initials">BI</span>
-          <span class="bio__portrait-caption">Bubba Irwin</span>
+          <span class="bio__portrait-caption">Candid B&amp;W photo of Bubba at work goes here</span>
         </div>
       </div>
       <div class="bio__text">
@@ -186,9 +201,17 @@
           <p class="section__eyebrow">The Artist</p>
           <h2 class="section__title">Bubba Irwin</h2>
         </div>
-        <p class="reveal">With more than two decades behind the machine, Bubba Irwin has built a reputation as one of the most versatile and dedicated tattoo artists working today. From large-scale black and grey realism to bold color work, his portfolio reflects a career spent refining every discipline of the craft — never settling into a single lane.</p>
-        <p class="reveal">Bubba's work is grounded in a simple philosophy: <em>every tattoo should be built to last a lifetime.</em> That means clean structure, deliberate composition, and honest collaboration with every client. A tattoo isn't just an image — it's a permanent piece of someone's story, and it deserves an artist who treats it that way.</p>
-        <p class="reveal">Alongside his client work, Bubba is a studio owner and mentor, helping shape the next generation of artists through his affiliated shops — Old Town Ink and Glasshouse Tattoo — where the standard is the same as his own: uncompromising quality, a clean professional environment, and art that holds up decades from now.</p>
+        <div class="bio__panel reveal">
+          <p>With more than two decades behind the machine, Bubba Irwin has built a reputation as one of the most versatile and dedicated tattoo artists working today. From large-scale black and grey realism to fire-lit color work, his portfolio reflects a career spent refining every discipline of the craft — never settling into a single lane.</p>
+        </div>
+        <div class="bio__tear" aria-hidden="true"></div>
+        <div class="bio__panel reveal">
+          <p>Bubba's work is grounded in a simple philosophy: <em>every tattoo should be built to last a lifetime.</em> That means clean structure, deliberate composition, and honest collaboration with every client. A tattoo isn't just an image — it's a permanent piece of someone's story, and it deserves an artist who treats it that way.</p>
+        </div>
+        <div class="bio__tear" aria-hidden="true"></div>
+        <div class="bio__panel reveal">
+          <p>Alongside his client work, Bubba is a studio owner and mentor, helping shape the next generation of artists through his affiliated shops — Old Town Ink and Glasshouse Tattoo — where the standard is the same as his own: uncompromising quality, a clean professional environment, and art that holds up decades from now.</p>
+        </div>
         <ul class="bio__stats reveal">
           <li><strong>20+</strong><span>Years Tattooing</span></li>
           <li><strong>2</strong><span>Affiliated Studios</span></li>
@@ -202,7 +225,7 @@
   <section class="section" id="affiliations">
     <div class="section__inner">
       <div class="section__head reveal">
-        <p class="section__eyebrow">Studios &amp; Projects</p>
+        <p class="section__eyebrow">Where to Find Him</p>
         <h2 class="section__title">Affiliations</h2>
         <p class="section__lede">Bubba works out of — and stands behind — these studios.</p>
       </div>
@@ -308,7 +331,7 @@
       <div class="footer__brand">
         <span class="nav__brand-mark">BI</span>
         <p class="footer__name">Bubba Irwin <em>Tattoo</em></p>
-        <p class="footer__tag">Custom tattoo artistry. Built to last.</p>
+        <p class="footer__tag">Dark. Edgy. Artistic. Outside the norm.</p>
       </div>
       <nav class="footer__nav" aria-label="Footer navigation">
         <a href="#top">Home</a>
@@ -341,10 +364,15 @@
     <button class="lightbox__arrow lightbox__arrow--prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
     <figure class="lightbox__figure">
       <img id="lightboxImg" src="" alt="">
-      <figcaption id="lightboxCaption"></figcaption>
+      <figcaption>
+        <span id="lightboxCaption"></span>
+        <p id="lightboxDesc"></p>
+      </figcaption>
     </figure>
     <button class="lightbox__arrow lightbox__arrow--next" id="lightboxNext" aria-label="Next image">&#8250;</button>
   </div>
+
+  <canvas id="emberCanvas" aria-hidden="true"></canvas>
 
   <script src="js/main.js"></script>
 </body>
