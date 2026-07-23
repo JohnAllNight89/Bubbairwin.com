@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubba Irwin — Tattoo Artist | Custom Tattoos &amp; Consultations</title>
+  <meta name="description" content="Official website of professional tattoo artist Bubba Irwin. View the portfolio, read the story, and book a consultation for custom tattoo work.">
+  <meta property="og:title" content="Bubba Irwin — Tattoo Artist">
+  <meta property="og:description" content="Custom tattoo work by Bubba Irwin. View the portfolio and book a consultation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bubbairwintattoo.com">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='14' fill='%230b0b0d'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23c9a227' font-family='Georgia,serif'%3EBI%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand" aria-label="Bubba Irwin — home">
+        <span class="nav__brand-mark">BI</span>
+        <span class="nav__brand-text">Bubba <em>Irwin</em></span>
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Primary navigation">
+        <a href="#top" class="nav__link is-active">Home</a>
+        <a href="#gallery" class="nav__link">Gallery</a>
+        <a href="#bio" class="nav__link">Bio</a>
+        <a href="#affiliations" class="nav__link">Affiliations</a>
+        <a href="#contact" class="nav__link nav__link--cta">Book Now</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal">Custom Tattoo Artistry</p>
+      <h1 class="hero__title reveal">
+        <span class="hero__title-line">Bubba</span>
+        <span class="hero__title-line hero__title-line--accent">Irwin</span>
+      </h1>
+      <p class="hero__tagline reveal"><em>Ink with intention.</em> Award-winning tattoo work built on two decades of craft, precision, and respect for the art.</p>
+      <div class="hero__actions reveal">
+        <a href="#contact" class="btn btn--primary">Book a Consultation</a>
+        <a href="#gallery" class="btn btn--ghost">View the Work</a>
+      </div>
+    </div>
+    <a href="#gallery" class="hero__scroll" aria-label="Scroll to gallery">
+      <span class="hero__scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ================= STYLE MARQUEE ================= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Black &amp; Grey</span><i>&#10022;</i>
+      <span>Color Realism</span><i>&#10022;</i>
+      <span>Traditional</span><i>&#10022;</i>
+      <span>Japanese</span><i>&#10022;</i>
+      <span>Fine Line</span><i>&#10022;</i>
+      <span>Custom Design</span><i>&#10022;</i>
+      <span>Black &amp; Grey</span><i>&#10022;</i>
+      <span>Color Realism</span><i>&#10022;</i>
+      <span>Traditional</span><i>&#10022;</i>
+      <span>Japanese</span><i>&#10022;</i>
+      <span>Fine Line</span><i>&#10022;</i>
+      <span>Custom Design</span><i>&#10022;</i>
+    </div>
+  </div>
+
+  <!-- ================= GALLERY ================= -->
+  <section class="section" id="gallery">
+    <div class="section__inner">
+      <div class="section__head reveal">
+        <p class="section__eyebrow">Portfolio</p>
+        <h2 class="section__title">The Work</h2>
+        <p class="section__lede">A selection of recent pieces. For the full, always-current portfolio, follow
+          <a href="https://www.instagram.com/bubbaitattoos" target="_blank" rel="noopener">@bubbaitattoos</a> on Instagram.</p>
+      </div>
+
+      <div class="gallery__filters reveal" role="group" aria-label="Filter gallery by style">
+        <button class="chip is-active" data-filter="all">All</button>
+        <button class="chip" data-filter="black-grey">Black &amp; Grey</button>
+        <button class="chip" data-filter="color">Color</button>
+        <button class="chip" data-filter="traditional">Traditional</button>
+        <button class="chip" data-filter="fine-line">Fine Line</button>
+      </div>
+
+      <div class="gallery__grid" id="galleryGrid">
+        <figure class="gallery__item gallery__item--featured reveal" data-style="black-grey">
+          <img src="assets/gallery/01-black-grey-portrait.svg" alt="Black and grey portrait realism tattoo" loading="lazy">
+          <figcaption class="gallery__caption"><span>Portrait Realism</span><small>Black &amp; Grey</small></figcaption>
+        </figure>
+        <figure class="gallery__item reveal" data-style="color">
+          <img src="assets/gallery/02-color-realism.svg" alt="Full color realism tattoo" loading="lazy">
+          <figcaption class="gallery__caption"><span>Color Realism</span><small>Full Color</small></figcaption>
+        </figure>
+        <figure class="gallery__item reveal" data-style="black-grey">
+          <img src="assets/gallery/03-skull-study.svg" alt="Dark realism skull tattoo" loading="lazy">
+          <figcaption class="gallery__caption"><span>Skull Study</span><small>Dark Realism</small></figcaption>
+        </figure>
+        <figure class="gallery__item reveal" data-style="color">
+          <img src="assets/gallery/04-japanese-sleeve.svg" alt="Japanese style full sleeve tattoo" loading="lazy">
+          <figcaption class="gallery__caption"><span>Japanese Sleeve</span><small>Full Sleeve</small></figcaption>
+        </figure>
+        <figure class="gallery__item reveal" data-style="color">
+          <img src="assets/gallery/05-wildlife-realism.svg" alt="Wildlife realism tattoo" loading="lazy">
+          <figcaption class="gallery__caption"><span>Wildlife Realism</span><small>Color Realism</small></figcaption>
+        </figure>
+        <figure class="gallery__item reveal" data-style="fine-line">
+          <img src="assets/gallery/06-fine-line.svg" alt="Fine line script tattoo" loading="lazy">
+          <figcaption class="gallery__caption"><span>Fine Line &amp; Script</span><small>Detail Work</small></figcaption>
+        </figure>
+        <figure class="gallery__item reveal" data-style="black-grey">
+          <img src="assets/gallery/07-surreal-composition.svg" alt="Surreal custom tattoo composition" loading="lazy">
+          <figcaption class="gallery__caption"><span>Surreal Composition</span><small>Custom Design</small></figcaption>
+        </figure>
+        <figure class="gallery__item reveal" data-style="traditional">
+          <img src="assets/gallery/08-traditional-eagle.svg" alt="Bold traditional americana eagle tattoo" loading="lazy">
+          <figcaption class="gallery__caption"><span>Traditional Eagle</span><small>Bold Americana</small></figcaption>
+        </figure>
+        <figure class="gallery__item reveal" data-style="black-grey">
+          <img src="assets/gallery/09-black-grey-sleeve.svg" alt="Black and grey full sleeve tattoo" loading="lazy">
+          <figcaption class="gallery__caption"><span>Black &amp; Grey Sleeve</span><small>Full Sleeve</small></figcaption>
+        </figure>
+      </div>
+
+      <p class="gallery__note reveal">Every piece is custom. Nothing is repeated.</p>
+    </div>
+  </section>
+
+  <!-- ================= PULL QUOTE ================= -->
+  <section class="quote" aria-label="Artist philosophy">
+    <div class="quote__inner reveal">
+      <span class="quote__mark" aria-hidden="true">&#8220;</span>
+      <blockquote>
+        <p>A tattoo should look as good in twenty years as the day it healed. That's the standard. There is no other standard.</p>
+        <cite>&mdash; Bubba Irwin</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ================= BIO ================= -->
+  <section class="section section--alt" id="bio">
+    <div class="section__inner bio">
+      <div class="bio__portrait reveal" aria-hidden="true">
+        <div class="bio__portrait-frame">
+          <span class="bio__portrait-initials">BI</span>
+          <span class="bio__portrait-caption">Bubba Irwin</span>
+        </div>
+      </div>
+      <div class="bio__text">
+        <div class="section__head section__head--left reveal">
+          <p class="section__eyebrow">The Artist</p>
+          <h2 class="section__title">Bubba Irwin</h2>
+        </div>
+        <p class="reveal">With more than two decades behind the machine, Bubba Irwin has built a reputation as one of the most versatile and dedicated tattoo artists working today. From large-scale black and grey realism to bold color work, his portfolio reflects a career spent refining every discipline of the craft — never settling into a single lane.</p>
+        <p class="reveal">Bubba's work is grounded in a simple philosophy: <em>every tattoo should be built to last a lifetime.</em> That means clean structure, deliberate composition, and honest collaboration with every client. A tattoo isn't just an image — it's a permanent piece of someone's story, and it deserves an artist who treats it that way.</p>
+        <p class="reveal">Alongside his client work, Bubba is a studio owner and mentor, helping shape the next generation of artists through his affiliated shops — Old Town Ink and Glasshouse Tattoo — where the standard is the same as his own: uncompromising quality, a clean professional environment, and art that holds up decades from now.</p>
+        <ul class="bio__stats reveal">
+          <li><strong>20+</strong><span>Years Tattooing</span></li>
+          <li><strong>2</strong><span>Affiliated Studios</span></li>
+          <li><strong>100%</strong><span>Custom Work</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AFFILIATIONS ================= -->
+  <section class="section" id="affiliations">
+    <div class="section__inner">
+      <div class="section__head reveal">
+        <p class="section__eyebrow">Studios &amp; Projects</p>
+        <h2 class="section__title">Affiliations</h2>
+        <p class="section__lede">Bubba works out of — and stands behind — these studios.</p>
+      </div>
+      <div class="affiliations__grid">
+        <a class="affiliation reveal" href="https://glasshousetattoo.com" target="_blank" rel="noopener">
+          <span class="affiliation__label">Studio</span>
+          <h3 class="affiliation__name">Glasshouse Tattoo</h3>
+          <p class="affiliation__desc">A modern, high-end custom tattoo studio built around clarity, craft, and client experience.</p>
+          <span class="affiliation__link">glasshousetattoo.com <span aria-hidden="true">&#8599;</span></span>
+        </a>
+        <a class="affiliation reveal" href="https://oldtownink.com" target="_blank" rel="noopener">
+          <span class="affiliation__label">Studio</span>
+          <h3 class="affiliation__name">Old Town Ink</h3>
+          <p class="affiliation__desc">An award-winning shop with a deep bench of talent and a reputation for world-class custom work.</p>
+          <span class="affiliation__link">oldtownink.com <span aria-hidden="true">&#8599;</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT / BOOKING ================= -->
+  <section class="section section--alt" id="contact">
+    <div class="section__inner contact">
+      <div class="contact__intro">
+        <div class="section__head section__head--left reveal">
+          <p class="section__eyebrow">Consultations &amp; Booking</p>
+          <h2 class="section__title">Let's Build Your Tattoo</h2>
+        </div>
+        <p class="reveal">Tell Bubba what you have in mind. Share your idea, where you want it, and any reference images — the more detail, the better. Every inquiry goes straight to Bubba and his team, and you'll hear back about consultation availability, sizing, and pricing.</p>
+        <ul class="contact__points reveal">
+          <li>All work is custom — references are a starting point, not a template.</li>
+          <li>Large-scale pieces (sleeves, back pieces) are booked as multi-session projects.</li>
+          <li>Deposits are required to secure appointment dates.</li>
+        </ul>
+        <p class="contact__direct reveal">Prefer email? Reach out directly at
+          <a href="mailto:Bubba@bubbairwintattoo.com">Bubba@bubbairwintattoo.com</a></p>
+      </div>
+
+      <form class="form reveal" id="bookingForm"
+            action="https://formsubmit.co/Bubba@bubbairwintattoo.com"
+            method="POST" enctype="multipart/form-data">
+        <!-- FormSubmit configuration -->
+        <input type="hidden" name="_subject" value="New Tattoo Consultation Request — bubbairwintattoo.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://bubbairwintattoo.com/thanks.html">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="form__row">
+          <div class="form__field">
+            <label for="f-name">Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="f-name" name="Name" required autocomplete="name" placeholder="Your full name">
+          </div>
+          <div class="form__field">
+            <label for="f-email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="f-email" name="Email" required autocomplete="email" placeholder="you@example.com">
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__field">
+            <label for="f-phone">Phone Number <span aria-hidden="true">*</span></label>
+            <input type="tel" id="f-phone" name="Phone" required autocomplete="tel" placeholder="(555) 555-5555">
+          </div>
+          <div class="form__field">
+            <label for="f-placement">Preferred Placement <span aria-hidden="true">*</span></label>
+            <select id="f-placement" name="Preferred Placement" required>
+              <option value="" disabled selected>Select placement…</option>
+              <option>Arm — Upper / Sleeve</option>
+              <option>Arm — Forearm</option>
+              <option>Hand / Wrist</option>
+              <option>Chest</option>
+              <option>Back</option>
+              <option>Ribs / Torso</option>
+              <option>Leg — Thigh</option>
+              <option>Leg — Calf / Lower</option>
+              <option>Neck</option>
+              <option>Other / Not sure yet</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form__field">
+          <label for="f-idea">Tattoo Idea / Description <span aria-hidden="true">*</span></label>
+          <textarea id="f-idea" name="Tattoo Idea" rows="5" required
+            placeholder="Describe your idea — subject, style (black &amp; grey, color, traditional…), approximate size, and anything else Bubba should know."></textarea>
+        </div>
+
+        <div class="form__field">
+          <label for="f-refs">Reference Images <small>(optional — JPG/PNG, up to 5)</small></label>
+          <input type="file" id="f-refs" name="attachment" accept="image/*" multiple>
+          <p class="form__hint" id="fileHint">Attach photos, sketches, or examples of styles you like.</p>
+        </div>
+
+        <button type="submit" class="btn btn--primary form__submit">Send Consultation Request</button>
+        <p class="form__note">Submissions are delivered directly to <strong>Bubba@bubbairwintattoo.com</strong>. You'll receive a reply as soon as possible — usually within a few business days.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="nav__brand-mark">BI</span>
+        <p class="footer__name">Bubba Irwin <em>Tattoo</em></p>
+        <p class="footer__tag">Custom tattoo artistry. Built to last.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#top">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#bio">Bio</a>
+        <a href="#affiliations">Affiliations</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/bubbaitattoos" target="_blank" rel="noopener" aria-label="Instagram — @bubbaitattoos">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+          <span>@bubbaitattoos</span>
+        </a>
+        <a href="mailto:Bubba@bubbairwintattoo.com" aria-label="Email Bubba">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          <span>Bubba@bubbairwintattoo.com</span>
+        </a>
+        <a href="https://glasshousetattoo.com" target="_blank" rel="noopener">Glasshouse Tattoo</a>
+        <a href="https://oldtownink.com" target="_blank" rel="noopener">Old Town Ink</a>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <p>&copy; <span id="year">2026</span> Bubba Irwin Tattoo. All rights reserved. All artwork is the property of Bubba Irwin and may not be reproduced without permission.</p>
+    </div>
+  </footer>
+
+  <!-- ================= LIGHTBOX ================= -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged gallery image" hidden>
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox__arrow lightbox__arrow--prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+    <figure class="lightbox__figure">
+      <img id="lightboxImg" src="" alt="">
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="lightbox__arrow lightbox__arrow--next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
