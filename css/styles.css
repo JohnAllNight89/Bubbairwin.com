@@ -1341,12 +1341,13 @@ a:hover { color: #ffffff; }
 /* ============================================================
    SCROLL REVEAL
    ============================================================ */
-.reveal {
+/* Content stays visible without JS; only hidden-then-revealed when JS runs */
+.js .reveal {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.65s ease, transform 0.65s ease;
 }
-.reveal.is-visible {
+.js .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
