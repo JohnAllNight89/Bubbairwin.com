@@ -676,6 +676,108 @@ a:hover { color: #ffffff; }
 }
 
 /* ============================================================
+   BIO — EXTENDED (Ink Master, accolades, clientele, Meet Bubba)
+   ============================================================ */
+.bio__more { margin-top: 3.5rem; }
+.bio__cols {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.3rem;
+}
+.bio__block {
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: var(--radius);
+  padding: 2rem 2rem 2.2rem;
+}
+.bio__block--wide { margin-top: 1.3rem; }
+.bio__subhead {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 0.9rem;
+}
+.bio__subhead--gap { margin-top: 2rem; }
+.bio__blurb { color: var(--ink-dim); font-size: 0.98rem; margin-bottom: 1.1rem; }
+.bio__blurb em, .bio__block em { font-style: italic; color: var(--ink); }
+
+.timeline { list-style: none; }
+.timeline li {
+  display: flex;
+  gap: 1.1rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(201, 207, 216, 0.1);
+}
+.timeline li:first-child { border-top: 0; padding-top: 0.2rem; }
+.timeline__badge {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 52px; height: 52px;
+  border: 1px solid var(--steel-edge);
+  border-radius: 50%;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: transparent;
+  background: linear-gradient(160deg, rgba(201, 207, 216, 0.08), transparent 60%);
+}
+.timeline__badge {
+  color: var(--steel);
+}
+.timeline strong {
+  display: block;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+.timeline p { color: var(--ink-dim); font-size: 0.94rem; }
+
+.accolades { list-style: none; }
+.accolades li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.7rem;
+  color: var(--ink-dim);
+  font-size: 0.96rem;
+}
+.accolades li::before {
+  content: "\2726"; /* four-pointed star */
+  position: absolute;
+  left: 0;
+  color: var(--steel);
+}
+
+.clients {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.clients li {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border: 1px solid var(--steel-edge);
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  background: linear-gradient(160deg, rgba(201, 207, 216, 0.07), transparent 60%);
+}
+.clients li small {
+  color: var(--ink-faint);
+  font-family: var(--font-body);
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* ============================================================
    WHY SIT IN BUBBA'S CHAIR
    ============================================================ */
 .why {
@@ -1186,6 +1288,7 @@ a:hover { color: #ffffff; }
   .marquee__track span { font-size: 0.95rem; }
   .quote { padding: 4rem 1.25rem; }
   .connect__grid { grid-template-columns: 1fr; }
+  .bio__cols { grid-template-columns: 1fr; }
   .why__grid { grid-template-columns: 1fr; }
   .why__watch { flex-direction: column; }
   .reels__grid { grid-template-columns: 1fr; max-width: 420px; }
