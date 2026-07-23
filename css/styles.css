@@ -269,22 +269,17 @@ a:hover { color: #ffffff; }
 .hero__title {
   font-family: var(--font-display);
   font-weight: 700;
-  /* 24px base, scaling up on larger screens; single line, left to right */
-  font-size: clamp(1.5rem, 6.5vw, 4.6rem);
-  line-height: 1.05;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
-  white-space: nowrap;
-  filter: drop-shadow(0 6px 30px rgba(0, 0, 0, 0.8));
 }
-.hero__title-line {
-  display: inline-block;
-  transform: skewX(8deg); /* backslash lean */
-  /* gradient must live on the transformed element itself for clip to paint */
-  color: transparent;
-  background: var(--chrome);
-  -webkit-background-clip: text;
-  background-clip: text;
+.hero__wordmark {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  margin-left: -2%;
+  /* fade the artwork's edges into the page black */
+  -webkit-mask-image: radial-gradient(ellipse 72% 68% at 50% 50%, #000 48%, transparent 88%);
+  mask-image: radial-gradient(ellipse 72% 68% at 50% 50%, #000 48%, transparent 88%);
+  filter: drop-shadow(0 10px 40px rgba(0, 0, 0, 0.8));
 }
 .hero__title-sub {
   display: block;
@@ -1032,6 +1027,7 @@ a:hover { color: #ffffff; }
    ============================================================ */
 @media (max-width: 1024px) {
   .hero__inner { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+  .hero__wordmark { margin: 0 auto; }
   .hero__tagline { margin-left: auto; margin-right: auto; }
   .hero__actions { justify-content: center; }
   .hero__social { justify-content: center; }
