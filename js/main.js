@@ -103,21 +103,23 @@
     showItem(vis, currentIndex);
   }
 
-  items.forEach((item) => {
-    item.addEventListener("click", () => openLightbox(item));
-  });
-  document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
-  document.getElementById("lightboxPrev").addEventListener("click", () => step(-1));
-  document.getElementById("lightboxNext").addEventListener("click", () => step(1));
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-  document.addEventListener("keydown", (e) => {
-    if (lightbox.hidden) return;
-    if (e.key === "Escape") closeLightbox();
-    if (e.key === "ArrowLeft") step(-1);
-    if (e.key === "ArrowRight") step(1);
-  });
+  if (lightbox) {
+    items.forEach((item) => {
+      item.addEventListener("click", () => openLightbox(item));
+    });
+    document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+    document.getElementById("lightboxPrev").addEventListener("click", () => step(-1));
+    document.getElementById("lightboxNext").addEventListener("click", () => step(1));
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (lightbox.hidden) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") step(-1);
+      if (e.key === "ArrowRight") step(1);
+    });
+  }
 
   /* ---------- Scroll reveal (fade in once; stays visible) ---------- */
   const revealObserver = new IntersectionObserver((entries) => {

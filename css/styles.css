@@ -1220,6 +1220,125 @@ a:hover { color: #ffffff; }
 .lightbox__arrow--next { right: 0.8rem; }
 
 /* ============================================================
+   STANDALONE PAGES (SEO landing pages & blog)
+   ============================================================ */
+.page {
+  padding: calc(var(--nav-h) + 3.5rem) 1.5rem 5rem;
+}
+.page__inner { max-width: 880px; margin: 0 auto; }
+.page__eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  font-size: 0.8rem;
+  color: var(--steel-dark);
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+.page h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+  letter-spacing: 0.03em;
+  line-height: 1.12;
+  text-transform: uppercase;
+  color: transparent;
+  background: var(--chrome);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 1.2rem;
+}
+.page .lede {
+  font-size: 1.12rem;
+  color: var(--ink-dim);
+  margin-bottom: 2.2rem;
+}
+.page h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 2.6rem 0 0.9rem;
+}
+.page h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 1.8rem 0 0.6rem;
+}
+.page p { color: var(--ink-dim); margin-bottom: 1.1rem; }
+.page p strong, .page li strong { color: var(--ink); font-weight: 600; }
+.page em { font-style: italic; color: var(--ink); }
+.page ul {
+  list-style: none;
+  margin: 0 0 1.3rem;
+}
+.page ul li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.65rem;
+  color: var(--ink-dim);
+}
+.page ul li::before {
+  content: "\2726";
+  position: absolute;
+  left: 0;
+  color: var(--steel);
+}
+.page a { font-weight: 600; }
+
+.page__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.8rem 0;
+}
+.page__gallery a {
+  display: block;
+  border: 1px solid var(--panel-edge);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--panel);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.page__gallery a:hover { transform: translateY(-4px); border-color: var(--steel-dark); }
+.page__gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.page__cta {
+  margin: 3rem 0 0;
+  background: linear-gradient(160deg, rgba(201, 207, 216, 0.09), transparent 55%), var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: var(--radius);
+  padding: 2.4rem 2.2rem;
+  text-align: center;
+}
+.page__cta h2 { margin-top: 0; }
+.page__cta p { max-width: 34rem; margin-left: auto; margin-right: auto; }
+.page__cta .btn { margin-top: 0.6rem; }
+
+.page__crumbs {
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+  margin-bottom: 2rem;
+  letter-spacing: 0.04em;
+}
+.page__crumbs a { color: var(--ink-dim); font-weight: 500; }
+.page__crumbs a:hover { color: #ffffff; }
+
+@media (max-width: 720px) {
+  .page__gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ============================================================
    SCROLL REVEAL
    ============================================================ */
 .reveal {
