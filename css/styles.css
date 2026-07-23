@@ -262,13 +262,21 @@ a:hover { color: #ffffff; }
   align-items: center;
 }
 .hero__eyebrow {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
   font-weight: 600;
-  letter-spacing: 0.45em;
-  font-size: 0.85rem;
-  color: var(--steel-dark);
+  letter-spacing: 0.32em;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--steel);
   text-transform: uppercase;
   margin-bottom: 1.4rem;
+}
+.hero__eyebrow-sub {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.28em;
+  color: var(--steel-dark);
 }
 .hero__title {
   font-family: var(--font-display);
