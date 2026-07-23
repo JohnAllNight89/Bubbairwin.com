@@ -42,6 +42,10 @@ Optional hardening: after activation, FormSubmit provides a random alias for the
 
 If you'd rather use another backend (Formspree, Netlify Forms, Basin…), only the `<form action="…">` attribute and hidden fields in `index.html` need to change.
 
+## SMS alerts (Twilio)
+
+Form submissions can also send a real text message to the owner's phone. The site fires a fire-and-forget POST to a Twilio Function on submit; the Function texts a condensed summary via the Twilio API. Full setup steps are in the header of [`docs/twilio-sms-function.js`](docs/twilio-sms-function.js) — after deploying the Function, paste its URL into the `SMS_ENDPOINT` constant near the bottom of `js/main.js`. If `SMS_ENDPOINT` is empty or the call fails, the form still delivers by email as normal. (T-Mobile's free email-to-text gateway was tried first and silently drops automated messages, hence Twilio.)
+
 ## Deployment on Render
 
 The site is plain HTML/CSS/JS with no build step, deployed as a **Render Static Site**. The included `render.yaml` Blueprint configures everything.

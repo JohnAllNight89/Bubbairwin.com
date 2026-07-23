@@ -162,6 +162,27 @@
     });
   }
 
+  /* ---------- SMS alert on form submit (Twilio Function) ----------
+     Set SMS_ENDPOINT to the deployed Twilio Function URL to enable.
+     Fire-and-forget: if it fails, the form submission still goes
+     through to FormSubmit for email delivery. */
+  const SMS_ENDPOINT = ""; // e.g. "https://bubba-sms-1234.twil.io/notify"
+  const bookingForm = document.getElementById("bookingForm");
+  if (bookingForm && SMS_ENDPOINT) {
+    bookingForm.addEventListener("submit", () => {
+      const data = new FormData(bookingForm);
+      const payload = new URLSearchParams();
+      ["Name", "Email", "Phone", "Preferred Placement", "Tattoo Idea"].forEach((k) => {
+        payload.append(k, data.get(k) || "");
+      });
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(SMS_ENDPOINT, payload);
+      } else {
+        fetch(SMS_ENDPOINT, { method: "POST", body: payload, keepalive: true }).catch(() => {});
+      }
+    });
+  }
+
   /* ---------- Footer year ---------- */
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
