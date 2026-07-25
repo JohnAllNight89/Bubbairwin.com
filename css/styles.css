@@ -1067,20 +1067,6 @@ a.partner__card:hover {
   display: flex;
   flex-direction: column;
 }
-.partner__card-body--solo { padding-top: 1.8rem; }
-.partner__card-tag {
-  align-self: flex-start;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--steel-dark);
-  border: 1px solid var(--steel-edge);
-  border-radius: var(--radius);
-  padding: 0.2rem 0.6rem;
-  margin-bottom: 0.7rem;
-}
 .partner__card h3 {
   font-family: var(--font-display);
   font-weight: 600;
@@ -1254,7 +1240,6 @@ a.partner__card:hover .partner__card-link { color: #ffffff; }
   text-transform: uppercase;
 }
 .footer__name em { font-style: normal; color: var(--steel-dark); }
-.footer__tag { color: var(--ink-faint); font-size: 0.92rem; margin-top: 0.4rem; }
 
 .footer__nav {
   display: flex;
