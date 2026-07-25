@@ -1006,6 +1006,10 @@ a:hover { color: #ffffff; }
    PARTNERS / AFFILIATES / SPONSORS
    ============================================================ */
 .partners { margin-top: 4rem; }
+.partner__card--featured {
+  max-width: 540px;
+  margin: 0 auto 1.5rem;
+}
 .partner__featured-post {
   max-width: 540px;
   margin: 0 auto 3rem;
