@@ -1080,6 +1080,17 @@ a.partner__card:hover {
   margin-top: 0.9rem;
 }
 a.partner__card:hover .partner__card-link { color: #ffffff; }
+.partner__card-members {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.partner__card-members a {
+  color: var(--ink-faint);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+}
 
 /* ============================================================
    CONTACT / FORM
