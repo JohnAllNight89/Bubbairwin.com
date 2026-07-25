@@ -1067,6 +1067,7 @@ a.partner__card:hover {
   display: flex;
   flex-direction: column;
 }
+.partner__card-body--solo { padding-top: 1.8rem; }
 .partner__card-tag {
   align-self: flex-start;
   font-family: var(--font-body);
